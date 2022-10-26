@@ -30,6 +30,12 @@ def main():
         help="Ask confirmation before overwritting any file"
     )
     arg_parser.add_argument(
+        "-assume-filename", "--assume-filename",
+        nargs='?',
+        default="some-c-file.c",
+        help="simulate arguments from clang-format"
+    )
+    arg_parser.add_argument(
         "filepaths",
         metavar="FILE",
         nargs="*",
